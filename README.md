@@ -10,11 +10,13 @@
 
 | # | Project | Architecture & Purpose | Live Transmission |
 |---|---------|------------------------|-------------------|
-| 1 | **Full-Stack SaaS Platform** | Real-time web application built end-to-end with React, Node.js & Supabase | [Live Demo ↗](https://github.com/anirbanghosh32245-max) |
-| 2 | **Interactive Motion Engine** | Kinetic, physics-driven web interfaces with micro-animations & HUD design | [Explore ↗](https://github.com/anirbanghosh32245-max) |
-| 3 | **Cloud Microservices & APIs** | Resilient backend logic, authentication workflows, and relational data pipelines | [Repository ↗](https://github.com/anirbanghosh32245-max) |
-| 4 | **UI/UX Design Systems** | Sleek, accessible design tokens and component libraries crafted for high conversion | [Case Study ↗](https://github.com/anirbanghosh32245-max) |
+| 1 | **Resonance** | Advanced Next-Gen Music Streaming Platform (Spotify Architecture) | [Repository ↗](https://github.com/syntax-architect/Resonance) |
+| 2 | **Study-Flow-AI** | Intelligent AI-driven productivity workspace & study assistant | [Repository ↗](https://github.com/syntax-architect/Study-Flow-AI) |
+| 3 | **SevaSparsh Foundation** | Full-stack platform built for social impact and community empowerment | [Repository ↗](https://github.com/syntax-architect/SevaSparsh-Foundation) |
+| 4 | **Caffe Experience** | Kinetic, modern animated web experience with micro-interactions | [Repository ↗](https://github.com/syntax-architect/Caffe-Website) |
+| 5 | **GYM Fitness Matrix** | High-energy dynamic web application for fitness tracking | [Repository ↗](https://github.com/syntax-architect/GYM-Website) |
+| 6 | **ReBook Platform** | Community-driven book exchange & social reading ecosystem | [Repository ↗](https://github.com/syntax-architect/ReBook) |
 
 ![Connect](./assets/connect.svg?v=2)
 
-**[Instagram @feelwithagnish](https://www.instagram.com/feelwithagnish/)** · **[GitHub @anirbanghosh32245-max](https://github.com/anirbanghosh32245-max)**
+**[Instagram @feelwithagnish](https://www.instagram.com/feelwithagnish/)** · **[GitHub @syntax-architect](https://github.com/syntax-architect)**
