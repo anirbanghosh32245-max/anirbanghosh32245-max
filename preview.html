@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Agnishwar Ghosh - Futuristic GitHub Profile Preview</title>
+<title>Agnishwar Ghosh — Design Studio Portfolio Preview</title>
 <style>
   :root {
-    --bg-dark: #070b16;
-    --card-border: #1a2a4c;
-    --text-color: #c9d1d9;
-    --accent: #00f0ff;
+    --bg-dark: #090c13;
+    --card-border: #1e2638;
+    --text-color: #cbd5e0;
+    --accent: #ff5500;
   }
   body {
     margin: 0;
@@ -20,9 +20,9 @@
     transition: background .25s ease;
   }
   body.light {
-    --bg-dark: #f6f8fa;
-    --text-color: #24292f;
-    --card-border: #d0d7de;
+    --bg-dark: #f7fafc;
+    --text-color: #1a202c;
+    --card-border: #e2e8f0;
     background: #ffffff;
   }
   .controls {
@@ -31,50 +31,52 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(13, 24, 48, 0.7);
-    backdrop-filter: blur(8px);
+    background: rgba(15, 20, 30, 0.85);
+    backdrop-filter: blur(10px);
     border: 1px solid var(--card-border);
-    border-radius: 14px;
+    border-radius: 12px;
     padding: 12px 20px;
   }
   body.light .controls {
-    background: rgba(240, 243, 246, 0.9);
+    background: rgba(247, 250, 252, 0.95);
   }
   .status-badge {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 13px;
+    gap: 10px;
+    font-size: 12.5px;
     font-family: monospace;
-    color: var(--accent);
+    color: #e2e8f0;
+    letter-spacing: .5px;
+  }
+  body.light .status-badge {
+    color: #2d3748;
   }
   .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: #00ff88;
-    box-shadow: 0 0 8px #00ff88;
+    width: 7px;
+    height: 7px;
+    background: #ff5500;
+    border-radius: 1px;
   }
   button {
-    padding: 9px 18px;
-    border-radius: 8px;
-    border: 1px solid #00f0ff;
-    background: rgba(0, 240, 255, 0.1);
-    color: #00f0ff;
-    font-weight: 600;
-    font-size: 13px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: 1px solid #2d3748;
+    background: #141b29;
+    color: #e2e8f0;
+    font-weight: 500;
+    font-size: 12.5px;
     cursor: pointer;
     transition: all .2s;
   }
   body.light button {
-    border-color: #0969da;
-    background: rgba(9, 105, 218, 0.08);
-    color: #0969da;
+    border-color: #cbd5e0;
+    background: #edf2f7;
+    color: #2d3748;
   }
   button:hover {
-    background: #00f0ff;
-    color: #070b16;
-    box-shadow: 0 0 14px rgba(0,240,255,0.4);
+    border-color: #ff5500;
+    color: #ff5500;
   }
   main {
     max-width: 830px;
@@ -83,51 +85,73 @@
   img {
     width: 100%;
     display: block;
-    margin: 0 0 18px;
-    border-radius: 26px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    margin: 0 0 16px;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   }
   .projects-box {
-    background: #091122;
-    border: 1px solid #1a2c54;
-    border-radius: 20px;
+    background: #0d121c;
+    border: 1px solid #1f293d;
+    border-radius: 16px;
     padding: 24px;
     margin-bottom: 20px;
   }
   body.light .projects-box {
-    background: #f6f8fa;
-    border-color: #d0d7de;
+    background: #f7fafc;
+    border-color: #e2e8f0;
   }
-  h2 {
-    margin-top: 0;
-    color: #00f0ff;
-    font-size: 20px;
-    letter-spacing: 1px;
+  .projects-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .projects-header h2 {
+    margin: 0;
+    font-size: 17px;
+    letter-spacing: .5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #f7fafc;
+  }
+  body.light .projects-header h2 {
+    color: #1a202c;
   }
   table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 14px;
+    font-size: 13.5px;
   }
   th, td {
-    padding: 10px 14px;
+    padding: 11px 14px;
     text-align: left;
-    border-bottom: 1px solid #1a2a4a;
+    border-bottom: 1px solid #182030;
   }
   body.light th, body.light td {
-    border-bottom: 1px solid #e1e4e8;
+    border-bottom: 1px solid #edf2f7;
   }
   th {
-    color: #8b9bb4;
+    color: #718096;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .live-tag {
+    color: #ff5500;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12.5px;
+  }
+  .live-tag:hover {
+    text-decoration: underline;
   }
   .footer-links {
     text-align: center;
     padding: 16px;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: 500;
   }
   .footer-links a {
-    color: #00f0ff;
+    color: #ff5500;
     text-decoration: none;
     margin: 0 12px;
   }
@@ -141,56 +165,77 @@
 <div class="controls">
   <div class="status-badge">
     <div class="dot"></div>
-    <span>CYBERPUNK HUD PROFILE ENGINE v2.0 // SYNTAX-ARCHITECT</span>
+    <span>DESIGN ENGINEER STUDIO EDITION // AGNISHWAR GHOSH</span>
   </div>
   <button onclick="document.body.classList.toggle('light')">Toggle Light / Dark Mode</button>
 </div>
 
 <main>
-  <img src="assets/hero.svg?v=2" alt="Futuristic Intro Banner">
-  <img src="assets/about-life.svg?v=2" alt="Holographic Capabilities Terminal">
-  <img src="assets/stack.svg?v=2" alt="Quantum Tech Stack Reactor">
-  <img src="assets/id-dashboard.svg?v=2" alt="Holographic ID Dashboard with Laser Scanner">
+  <img src="assets/hero.svg?v=3" alt="Design Engineer Intro Banner">
+  <img src="assets/about-life.svg?v=3" alt="Capabilities & Craft Specifications">
+  <img src="assets/stack.svg?v=3" alt="Precision Toolchain Matrix">
+  <img src="assets/id-dashboard.svg?v=3" alt="Physical Studio Pass Dashboard">
   
   <div class="projects-box">
-    <h2>🚀 FEATURED BUILDS // PROJECTS</h2>
+    <div class="projects-header">
+      <div class="dot"></div>
+      <h2>Selected Engineering Deployments // 2026</h2>
+    </div>
     <table>
       <thead>
         <tr>
-          <th>#</th>
-          <th>Project</th>
-          <th>What It Does</th>
-          <th>Live Transmission</th>
+          <th>Index</th>
+          <th>System</th>
+          <th>Architecture &amp; Purpose</th>
+          <th>Source</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>1</td>
-          <td><strong>Full-Stack Platform</strong></td>
-          <td>Next-generation React and Supabase web app with real-time sync</td>
-          <td><a href="#" style="color:#00f0ff">Launch Demo ↗</a></td>
+          <td style="color:#ff5500;font-weight:700">01</td>
+          <td><strong>Resonance</strong></td>
+          <td>Next-generation music streaming platform built on modern Spotify architecture</td>
+          <td><a class="live-tag" href="https://github.com/syntax-architect/Resonance">Repository ↗</a></td>
         </tr>
         <tr>
-          <td>2</td>
-          <td><strong>Animated Motion Engine</strong></td>
-          <td>Interactive sci-fi web experiences built with motion physics</td>
-          <td><a href="#" style="color:#00f0ff">View Project ↗</a></td>
+          <td style="color:#ff5500;font-weight:700">02</td>
+          <td><strong>Study-Flow-AI</strong></td>
+          <td>Intelligent productivity workspace with agentic learning workflows</td>
+          <td><a class="live-tag" href="https://github.com/syntax-architect/Study-Flow-AI">Repository ↗</a></td>
         </tr>
         <tr>
-          <td>3</td>
-          <td><strong>API Backend & Logic</strong></td>
-          <td>Scalable Node.js microservices with distributed database architecture</td>
-          <td><a href="#" style="color:#00f0ff">Explore Code ↗</a></td>
+          <td style="color:#ff5500;font-weight:700">03</td>
+          <td><strong>SevaSparsh Foundation</strong></td>
+          <td>Social impact web platform engineered for community empowerment</td>
+          <td><a class="live-tag" href="https://github.com/syntax-architect/SevaSparsh-Foundation">Repository ↗</a></td>
+        </tr>
+        <tr>
+          <td style="color:#ff5500;font-weight:700">04</td>
+          <td><strong>Caffe Experience</strong></td>
+          <td>Kinetic, animated web experience with micro-interactions &amp; fluid motion</td>
+          <td><a class="live-tag" href="https://github.com/syntax-architect/Caffe-Website">Repository ↗</a></td>
+        </tr>
+        <tr>
+          <td style="color:#ff5500;font-weight:700">05</td>
+          <td><strong>GYM Fitness Matrix</strong></td>
+          <td>High-performance dynamic web application for fitness metrics tracking</td>
+          <td><a class="live-tag" href="https://github.com/syntax-architect/GYM-Website">Repository ↗</a></td>
+        </tr>
+        <tr>
+          <td style="color:#ff5500;font-weight:700">06</td>
+          <td><strong>ReBook Platform</strong></td>
+          <td>Community-driven social reading and book exchange ecosystem</td>
+          <td><a class="live-tag" href="https://github.com/syntax-architect/ReBook">Repository ↗</a></td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <img src="assets/connect.svg?v=2" alt="Connect with Agnishwar Ghosh">
+  <img src="assets/connect.svg?v=3" alt="Studio Connect">
 
   <div class="footer-links">
     <a href="https://www.instagram.com/feelwithagnish/" target="_blank">Instagram @feelwithagnish</a> · 
-    <a href="https://github.com/syntax-architect" target="_blank">GitHub syntax-architect</a>
+    <a href="https://github.com/syntax-architect" target="_blank">GitHub @syntax-architect</a>
   </div>
 </main>
 
