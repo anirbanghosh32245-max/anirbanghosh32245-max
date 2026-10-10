@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agnishwar Ghosh - Futuristic GitHub Profile Preview</title>
+<style>
+  :root {
+    --bg-dark: #070b16;
+    --card-border: #1a2a4c;
+    --text-color: #c9d1d9;
+    --accent: #00f0ff;
+  }
+  body {
+    margin: 0;
+    padding: 30px 20px;
+    background: var(--bg-dark);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    transition: background .25s ease;
+  }
+  body.light {
+    --bg-dark: #f6f8fa;
+    --text-color: #24292f;
+    --card-border: #d0d7de;
+    background: #ffffff;
+  }
+  .controls {
+    max-width: 830px;
+    margin: 0 auto 24px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(13, 24, 48, 0.7);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--card-border);
+    border-radius: 14px;
+    padding: 12px 20px;
+  }
+  body.light .controls {
+    background: rgba(240, 243, 246, 0.9);
+  }
+  .status-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-family: monospace;
+    color: var(--accent);
+  }
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #00ff88;
+    box-shadow: 0 0 8px #00ff88;
+  }
+  button {
+    padding: 9px 18px;
+    border-radius: 8px;
+    border: 1px solid #00f0ff;
+    background: rgba(0, 240, 255, 0.1);
+    color: #00f0ff;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all .2s;
+  }
+  body.light button {
+    border-color: #0969da;
+    background: rgba(9, 105, 218, 0.08);
+    color: #0969da;
+  }
+  button:hover {
+    background: #00f0ff;
+    color: #070b16;
+    box-shadow: 0 0 14px rgba(0,240,255,0.4);
+  }
+  main {
+    max-width: 830px;
+    margin: auto;
+  }
+  img {
+    width: 100%;
+    display: block;
+    margin: 0 0 18px;
+    border-radius: 26px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+  }
+  .projects-box {
+    background: #091122;
+    border: 1px solid #1a2c54;
+    border-radius: 20px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  body.light .projects-box {
+    background: #f6f8fa;
+    border-color: #d0d7de;
+  }
+  h2 {
+    margin-top: 0;
+    color: #00f0ff;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  th, td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid #1a2a4a;
+  }
+  body.light th, body.light td {
+    border-bottom: 1px solid #e1e4e8;
+  }
+  th {
+    color: #8b9bb4;
+  }
+  .footer-links {
+    text-align: center;
+    padding: 16px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .footer-links a {
+    color: #00f0ff;
+    text-decoration: none;
+    margin: 0 12px;
+  }
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<div class="controls">
+  <div class="status-badge">
+    <div class="dot"></div>
+    <span>CYBERPUNK HUD PROFILE ENGINE v2.0 // SYNTAX-ARCHITECT</span>
+  </div>
+  <button onclick="document.body.classList.toggle('light')">Toggle Light / Dark Mode</button>
+</div>
+
+<main>
+  <img src="assets/hero.svg?v=2" alt="Futuristic Intro Banner">
+  <img src="assets/about-life.svg?v=2" alt="Holographic Capabilities Terminal">
+  <img src="assets/stack.svg?v=2" alt="Quantum Tech Stack Reactor">
+  <img src="assets/id-dashboard.svg?v=2" alt="Holographic ID Dashboard with Laser Scanner">
+  
+  <div class="projects-box">
+    <h2>🚀 FEATURED BUILDS // PROJECTS</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Project</th>
+          <th>What It Does</th>
+          <th>Live Transmission</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><strong>Full-Stack Platform</strong></td>
+          <td>Next-generation React and Supabase web app with real-time sync</td>
+          <td><a href="#" style="color:#00f0ff">Launch Demo ↗</a></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><strong>Animated Motion Engine</strong></td>
+          <td>Interactive sci-fi web experiences built with motion physics</td>
+          <td><a href="#" style="color:#00f0ff">View Project ↗</a></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><strong>API Backend & Logic</strong></td>
+          <td>Scalable Node.js microservices with distributed database architecture</td>
+          <td><a href="#" style="color:#00f0ff">Explore Code ↗</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <img src="assets/connect.svg?v=2" alt="Connect with Agnishwar Ghosh">
+
+  <div class="footer-links">
+    <a href="https://www.instagram.com/feelwithagnish/" target="_blank">Instagram @feelwithagnish</a> · 
+    <a href="https://github.com/syntax-architect" target="_blank">GitHub syntax-architect</a>
+  </div>
+</main>
+
+</body>
+</html>
