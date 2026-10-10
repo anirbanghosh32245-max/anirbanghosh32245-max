@@ -6,24 +6,30 @@
 <title>Agnishwar Ghosh — Design Studio Portfolio Preview</title>
 <style>
   :root {
-    --bg-dark: #090c13;
+    --bg-dark: #070b12;
+    --card-bg: #0c111a;
     --card-border: #1e2638;
-    --text-color: #cbd5e0;
-    --accent: #ff5500;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --accent-orange: #ff5500;
+    --accent-blue: #3b82f6;
+    --accent-green: #10b981;
   }
   body {
     margin: 0;
     padding: 30px 20px;
     background: var(--bg-dark);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--text-color);
-    transition: background .25s ease;
+    color: var(--text-secondary);
+    transition: background .25s ease, color .25s ease;
   }
   body.light {
-    --bg-dark: #f7fafc;
-    --text-color: #1a202c;
+    --bg-dark: #f8fafc;
+    --card-bg: #ffffff;
     --card-border: #e2e8f0;
-    background: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    background: #f1f5f9;
   }
   .controls {
     max-width: 830px;
@@ -31,39 +37,43 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(15, 20, 30, 0.85);
-    backdrop-filter: blur(10px);
+    background: rgba(12, 17, 26, 0.85);
+    backdrop-filter: blur(12px);
     border: 1px solid var(--card-border);
     border-radius: 12px;
-    padding: 12px 20px;
+    padding: 14px 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
   }
   body.light .controls {
-    background: rgba(247, 250, 252, 0.95);
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
   }
   .status-badge {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     font-size: 12.5px;
-    font-family: monospace;
-    color: #e2e8f0;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    color: var(--text-primary);
     letter-spacing: .5px;
   }
-  body.light .status-badge {
-    color: #2d3748;
-  }
   .dot {
-    width: 7px;
-    height: 7px;
-    background: #ff5500;
-    border-radius: 1px;
+    width: 8px;
+    height: 8px;
+    background: var(--accent-orange);
+    border-radius: 2px;
+    box-shadow: 0 0 8px var(--accent-orange);
+  }
+  .live-clock {
+    color: var(--accent-green);
+    font-weight: 600;
   }
   button {
     padding: 8px 16px;
     border-radius: 6px;
-    border: 1px solid #2d3748;
-    background: #141b29;
-    color: #e2e8f0;
+    border: 1px solid var(--card-border);
+    background: #141c2b;
+    color: var(--text-primary);
     font-weight: 500;
     font-size: 12.5px;
     cursor: pointer;
@@ -71,50 +81,45 @@
   }
   body.light button {
     border-color: #cbd5e0;
-    background: #edf2f7;
-    color: #2d3748;
+    background: #e2e8f0;
+    color: #1e293b;
   }
   button:hover {
-    border-color: #ff5500;
-    color: #ff5500;
+    border-color: var(--accent-orange);
+    color: var(--accent-orange);
   }
   main {
     max-width: 830px;
     margin: auto;
   }
-  img {
+  .banner-img {
     width: 100%;
     display: block;
-    margin: 0 0 16px;
+    margin: 0 0 20px;
     border-radius: 24px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    transition: transform .2s ease;
   }
   .projects-box {
-    background: #0d121c;
-    border: 1px solid #1f293d;
-    border-radius: 16px;
-    padding: 24px;
-    margin-bottom: 20px;
-  }
-  body.light .projects-box {
-    background: #f7fafc;
-    border-color: #e2e8f0;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    padding: 28px;
+    margin: 28px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
   }
   .projects-header {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 16px;
+    gap: 10px;
+    margin-bottom: 20px;
   }
   .projects-header h2 {
     margin: 0;
-    font-size: 17px;
+    font-size: 18px;
+    font-weight: 700;
     letter-spacing: .5px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: #f7fafc;
-  }
-  body.light .projects-header h2 {
-    color: #1a202c;
+    color: var(--text-primary);
   }
   table {
     width: 100%;
@@ -122,41 +127,114 @@
     font-size: 13.5px;
   }
   th, td {
-    padding: 11px 14px;
+    padding: 14px 16px;
     text-align: left;
-    border-bottom: 1px solid #182030;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
   }
   body.light th, body.light td {
     border-bottom: 1px solid #edf2f7;
   }
   th {
-    color: #718096;
+    color: #64748b;
     font-size: 11px;
     letter-spacing: 1px;
     text-transform: uppercase;
+    font-family: monospace;
+  }
+  td strong {
+    color: var(--text-primary);
+    font-size: 14.5px;
+  }
+  .desc-sub {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+    margin-top: 4px;
   }
   .live-tag {
-    color: #ff5500;
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: rgba(255, 85, 0, 0.12);
+    border: 1px solid rgba(255, 85, 0, 0.3);
+    color: var(--accent-orange);
     text-decoration: none;
     font-weight: 600;
-    font-size: 12.5px;
+    font-size: 12px;
+    transition: all .2s ease;
   }
   .live-tag:hover {
-    text-decoration: underline;
+    background: var(--accent-orange);
+    color: #ffffff;
   }
+  
+  /* Terminal block */
+  .terminal-box {
+    background: #05080e;
+    border: 1px solid #1a2233;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 28px 0;
+    font-family: 'SF Mono', Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    line-height: 1.6;
+    color: #cbd5e0;
+  }
+  .terminal-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #141b2b;
+  }
+  .t-dot { width: 10px; height: 10px; border-radius: 50%; }
+  .t-red { background: #ef4444; }
+  .t-yellow { background: #f59e0b; }
+  .t-green { background: #10b981; }
+
+  /* Stats row */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 28px 0;
+  }
+  .stats-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 16px;
+    padding: 16px;
+    text-align: center;
+  }
+  .stats-card img {
+    max-width: 100%;
+    height: auto;
+  }
+
   .footer-links {
     text-align: center;
-    padding: 16px;
-    font-size: 14px;
-    font-weight: 500;
+    padding: 24px;
+    margin-top: 10px;
   }
-  .footer-links a {
-    color: #ff5500;
+  .social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    margin: 0 8px;
+    border-radius: 8px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-primary);
     text-decoration: none;
-    margin: 0 12px;
+    font-weight: 500;
+    font-size: 13.5px;
+    transition: all .2s ease;
   }
-  .footer-links a:hover {
-    text-decoration: underline;
+  .social-btn:hover {
+    border-color: var(--accent-orange);
+    color: var(--accent-orange);
+    transform: translateY(-2px);
   }
 </style>
 </head>
@@ -165,17 +243,27 @@
 <div class="controls">
   <div class="status-badge">
     <div class="dot"></div>
-    <span>DESIGN ENGINEER STUDIO EDITION // AGNISHWAR GHOSH</span>
+    <span>DESIGN ENGINEER STUDIO // AGNISHWAR GHOSH</span>
+    <span style="color:#4a5568">|</span>
+    <span class="live-clock" id="clock">UTC+05:30</span>
   </div>
   <button onclick="document.body.classList.toggle('light')">Toggle Light / Dark Mode</button>
 </div>
 
 <main>
-  <img src="assets/hero.svg?v=3" alt="Design Engineer Intro Banner">
-  <img src="assets/about-life.svg?v=3" alt="Capabilities & Craft Specifications">
-  <img src="assets/stack.svg?v=3" alt="Precision Toolchain Matrix">
-  <img src="assets/id-dashboard.svg?v=3" alt="Physical Studio Pass Dashboard">
+  <!-- 1. Hero -->
+  <img class="banner-img" src="assets/hero.svg?v=4" alt="Design Engineer Intro Banner">
   
+  <!-- 2. Capabilities -->
+  <img class="banner-img" src="assets/about-life.svg?v=4" alt="Capabilities & Craft Specifications">
+  
+  <!-- 3. Toolchain Orbit -->
+  <img class="banner-img" src="assets/stack.svg?v=4" alt="Precision Toolchain Matrix">
+  
+  <!-- 4. ID Pass -->
+  <img class="banner-img" src="assets/id-dashboard.svg?v=4" alt="Physical Studio Pass Dashboard">
+  
+  <!-- 5. Projects Showcase -->
   <div class="projects-box">
     <div class="projects-header">
       <div class="dot"></div>
@@ -192,52 +280,106 @@
       </thead>
       <tbody>
         <tr>
-          <td style="color:#ff5500;font-weight:700">01</td>
-          <td><strong>Resonance</strong></td>
-          <td>Next-generation music streaming platform built on modern Spotify architecture</td>
-          <td><a class="live-tag" href="https://github.com/syntax-architect/Resonance">Repository ↗</a></td>
+          <td style="color:#ff5500;font-weight:700;font-family:monospace">01</td>
+          <td>
+            <strong>Resonance</strong>
+            <div class="desc-sub">React 19 · Web Audio API · Real-time Waveforms</div>
+          </td>
+          <td>Spotify-class next-generation audio streaming platform with synchronized lyric streams and low-latency audio queue.</td>
+          <td><a class="live-tag" href="https://github.com/syntax-architect/Resonance" target="_blank">Repository ↗</a></td>
         </tr>
         <tr>
-          <td style="color:#ff5500;font-weight:700">02</td>
-          <td><strong>Study-Flow-AI</strong></td>
-          <td>Intelligent productivity workspace with agentic learning workflows</td>
-          <td><a class="live-tag" href="https://github.com/syntax-architect/Study-Flow-AI">Repository ↗</a></td>
+          <td style="color:#ff5500;font-weight:700;font-family:monospace">02</td>
+          <td>
+            <strong>Study-Flow-AI</strong>
+            <div class="desc-sub">Next.js · LangChain · Vector Embeddings · Tailwind</div>
+          </td>
+          <td>Intelligent productivity workspace orchestrating agentic learning schedules and cognitive flow management.</td>
+          <td><a class="live-tag" href="https://github.com/syntax-architect/Study-Flow-AI" target="_blank">Repository ↗</a></td>
         </tr>
         <tr>
-          <td style="color:#ff5500;font-weight:700">03</td>
-          <td><strong>SevaSparsh Foundation</strong></td>
-          <td>Social impact web platform engineered for community empowerment</td>
-          <td><a class="live-tag" href="https://github.com/syntax-architect/SevaSparsh-Foundation">Repository ↗</a></td>
+          <td style="color:#ff5500;font-weight:700;font-family:monospace">03</td>
+          <td>
+            <strong>SevaSparsh Foundation</strong>
+            <div class="desc-sub">Civic Tech Platform · Responsive Architecture</div>
+          </td>
+          <td>Social impact web platform engineered for community empowerment, transparent donation ledgers &amp; volunteer coordination.</td>
+          <td><a class="live-tag" href="https://github.com/syntax-architect/SevaSparsh-Foundation" target="_blank">Repository ↗</a></td>
         </tr>
         <tr>
-          <td style="color:#ff5500;font-weight:700">04</td>
-          <td><strong>Caffe Experience</strong></td>
-          <td>Kinetic, animated web experience with micro-interactions &amp; fluid motion</td>
-          <td><a class="live-tag" href="https://github.com/syntax-architect/Caffe-Website">Repository ↗</a></td>
+          <td style="color:#ff5500;font-weight:700;font-family:monospace">04</td>
+          <td>
+            <strong>Caffe Experience</strong>
+            <div class="desc-sub">Vanilla JS · 60fps Motion · Audio Feedback</div>
+          </td>
+          <td>Kinetic web experience exploring sensory digital physics, micro-interactions, and avant-garde editorial typography.</td>
+          <td><a class="live-tag" href="https://github.com/syntax-architect/Caffe-Website" target="_blank">Repository ↗</a></td>
         </tr>
         <tr>
-          <td style="color:#ff5500;font-weight:700">05</td>
-          <td><strong>GYM Fitness Matrix</strong></td>
-          <td>High-performance dynamic web application for fitness metrics tracking</td>
-          <td><a class="live-tag" href="https://github.com/syntax-architect/GYM-Website">Repository ↗</a></td>
+          <td style="color:#ff5500;font-weight:700;font-family:monospace">05</td>
+          <td>
+            <strong>GYM Fitness Matrix</strong>
+            <div class="desc-sub">Telemetry Engine · Biometric Visualizations</div>
+          </td>
+          <td>High-performance dynamic web application calculating progressive overload curves and real-time fitness metrics.</td>
+          <td><a class="live-tag" href="https://github.com/syntax-architect/GYM-Website" target="_blank">Repository ↗</a></td>
         </tr>
         <tr>
-          <td style="color:#ff5500;font-weight:700">06</td>
-          <td><strong>ReBook Platform</strong></td>
-          <td>Community-driven social reading and book exchange ecosystem</td>
-          <td><a class="live-tag" href="https://github.com/syntax-architect/ReBook">Repository ↗</a></td>
+          <td style="color:#ff5500;font-weight:700;font-family:monospace">06</td>
+          <td>
+            <strong>ReBook Platform</strong>
+            <div class="desc-sub">Full-Stack · Peer Matching · Algorithmic Feed</div>
+          </td>
+          <td>Community-driven social reading and book exchange ecosystem supporting circular reading in student networks.</td>
+          <td><a class="live-tag" href="https://github.com/syntax-architect/ReBook" target="_blank">Repository ↗</a></td>
         </tr>
       </tbody>
     </table>
   </div>
 
-  <img src="assets/connect.svg?v=3" alt="Studio Connect">
+  <!-- 6. Terminal Box -->
+  <div class="terminal-box">
+    <div class="terminal-header">
+      <div class="t-dot t-red"></div>
+      <div class="t-dot t-yellow"></div>
+      <div class="t-dot t-green"></div>
+      <span style="color:#64748b;margin-left:8px">bash — syntax-architect@studio-node-01:~</span>
+    </div>
+    <div>$ npx syntax-architect --diagnostics</div>
+    <div style="color:#10b981;margin-top:8px">✔ ARCHITECT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Agnishwar Ghosh</div>
+    <div>✔ BASE LOCATION &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Kolkata, West Bengal, India [UTC+05:30]</div>
+    <div>✔ STATUS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Available for Global Roles &amp; High-Impact Builds</div>
+    <div>✔ RUNTIME &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Node.js 22 LTS · Python 3.12 · Modern V8</div>
+    <div>✔ ACTIVE REPOSITORIES : 8 Public Production Repositories</div>
+    <div style="color:#ff5500">✔ TELEMETRY &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: Latency 1.2ms · Uptime 99.98% · Status Nominal</div>
+  </div>
 
+  <!-- 7. Connect -->
+  <img class="banner-img" src="assets/connect.svg?v=4" alt="Studio Connect">
+
+  <!-- 8. Interactive Social Actions -->
   <div class="footer-links">
-    <a href="https://www.instagram.com/feelwithagnish/" target="_blank">Instagram @feelwithagnish</a> · 
-    <a href="https://github.com/syntax-architect" target="_blank">GitHub @syntax-architect</a>
+    <a class="social-btn" href="https://www.instagram.com/feelwithagnish/" target="_blank">
+      <span style="color:#ff5500">●</span> Instagram @feelwithagnish
+    </a>
+    <a class="social-btn" href="https://github.com/syntax-architect" target="_blank">
+      <span style="color:#3b82f6">●</span> GitHub @syntax-architect
+    </a>
+    <a class="social-btn" href="mailto:agnighosh207@gmail.com">
+      <span style="color:#10b981">●</span> Email Dispatch
+    </a>
   </div>
 </main>
+
+<script>
+  function updateClock() {
+    const now = new Date();
+    const options = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+    document.getElementById('clock').textContent = now.toLocaleTimeString('en-GB', options) + ' IST';
+  }
+  setInterval(updateClock, 1000);
+  updateClock();
+</script>
 
 </body>
 </html>

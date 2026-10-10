@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="830" height="640" viewBox="0 0 830 640" role="img" aria-labelledby="id-t id-d_">
-<title id="id-t">Studio Pass for syntax-architect</title>
+<title id="id-t">Studio Identity Pass for syntax-architect</title>
 <desc id="id-d_">A physical studio identity card for Agnishwar Ghosh with realistic lanyard and spec data.</desc>
 <defs>
 <style>
@@ -10,19 +10,22 @@
 .id-b{font-family:'id-body','Poppins','Segoe UI',Arial,sans-serif;font-weight:500}
 .id-m{font-family:'id-mono','DejaVu Sans Mono',Consolas,Menlo,monospace;font-weight:400}
 
-/* Physics Pendulum Motion */
 .id-drop{animation:id-dr 1.1s cubic-bezier(.16,1,.3,1) both}
 @keyframes id-dr{from{transform:translateY(-640px)}to{transform:translateY(0)}}
 
 .id-swing{animation:id-sw 6.5s ease-in-out infinite alternate; transform-origin:415px -40px;}
 @keyframes id-sw{0%{transform:rotate(-1.7deg)}100%{transform:rotate(1.7deg)}}
 
+/* Holographic foil sweep */
+.id-foil{animation:foil-sweep 7s ease-in-out infinite;}
+@keyframes foil-sweep{0%,20%{opacity:0;transform:translateX(-100px) rotate(25deg)}45%,55%{opacity:.35;transform:translateX(180px) rotate(25deg)}80%,100%{opacity:0;transform:translateX(380px) rotate(25deg)}}
+
 .id-still{display:none}
 @media (prefers-reduced-motion:reduce){.id-drop{animation:none!important}.id-swing{animation:none!important}.id-anim{display:none}.id-still{display:inline}*{animation:none!important}}
 </style>
 
 <pattern id="id-grid" width="22" height="22" patternUnits="userSpaceOnUse">
-  <path d="M 22 0 L 0 0 0 22" fill="none" stroke="#1c2230" stroke-width=".7" opacity=".4"/>
+  <path d="M 22 0 L 0 0 0 22" fill="none" stroke="#161c27" stroke-width=".7" opacity=".45"/>
 </pattern>
 
 <linearGradient id="id-bd" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="830" y2="640">
@@ -44,13 +47,22 @@
   <stop offset="1" stop-color="#080b12"/>
 </linearGradient>
 
+<linearGradient id="id-foil-grad" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#38bdf8" stop-opacity="0"/>
+  <stop offset=".5" stop-color="#ffedd5" stop-opacity=".8"/>
+  <stop offset="1" stop-color="#f43f5e" stop-opacity="0"/>
+</linearGradient>
+
 <clipPath id="id-pf">
   <rect x="289" y="254" width="252" height="228" rx="14"/>
+</clipPath>
+<clipPath id="id-card-clip">
+  <rect x="265" y="190" width="300" height="400" rx="18"/>
 </clipPath>
 </defs>
 
 <!-- Canvas -->
-<rect x=".75" y=".75" width="828.5" height="638.5" rx="24" fill="#090c13"/>
+<rect x=".75" y=".75" width="828.5" height="638.5" rx="24" fill="#080b12"/>
 <rect x=".75" y=".75" width="828.5" height="638.5" rx="24" fill="url(#id-grid)"/>
 
 <!-- Top Spec Bar -->
@@ -62,35 +74,37 @@
 
 <!-- Left Editorial Spec Sheet -->
 <g transform="translate(40, 230)">
-  <rect x="0" y="0" width="195" height="190" rx="12" fill="#0d121c" stroke="#1f293d" stroke-width="1.2"/>
+  <rect x="0" y="0" width="195" height="200" rx="12" fill="#0c111a" stroke="#1f293d" stroke-width="1.2"/>
   <text class="id-m" x="16" y="26" font-size="10.5" fill="#ff5500" letter-spacing="1.5">DISCIPLINE // FOCUS</text>
-  <text class="id-b" x="16" y="54" font-size="14.5" fill="#f7fafc">Full-stack web apps</text>
-  <text class="id-b" x="16" y="80" font-size="14.5" fill="#f7fafc">Kinetic websites</text>
-  <text class="id-b" x="16" y="106" font-size="14.5" fill="#f7fafc">Systems UI / UX</text>
-  <line x1="16" y1="124" x2="175" y2="124" stroke="#1f293d" stroke-width="1"/>
-  <text class="id-m" x="16" y="146" font-size="11" fill="#718096">STUDIO BASE</text>
-  <text class="id-b" x="16" y="166" font-size="13.5" fill="#e2e8f0">Kolkata, India</text>
+  <text class="id-b" x="16" y="54" font-size="14.5" fill="#ffffff">Full-stack web apps</text>
+  <text class="id-b" x="16" y="80" font-size="14.5" fill="#ffffff">Kinetic websites</text>
+  <text class="id-b" x="16" y="106" font-size="14.5" fill="#ffffff">Systems UI / UX</text>
+  <text class="id-b" x="16" y="132" font-size="14.5" fill="#ffffff">AI &amp; Agent Workspaces</text>
+  <line x1="16" y1="146" x2="175" y2="146" stroke="#1f293d" stroke-width="1"/>
+  <text class="id-m" x="16" y="166" font-size="11" fill="#718096">STUDIO BASE</text>
+  <text class="id-b" x="16" y="186" font-size="13.5" fill="#e2e8f0">Kolkata, India</text>
 </g>
 
 <!-- Right Editorial Spec Sheet -->
 <g transform="translate(595, 230)">
-  <rect x="0" y="0" width="195" height="190" rx="12" fill="#0d121c" stroke="#1f293d" stroke-width="1.2"/>
+  <rect x="0" y="0" width="195" height="200" rx="12" fill="#0c111a" stroke="#1f293d" stroke-width="1.2"/>
   <text class="id-m" x="16" y="26" font-size="10.5" fill="#3b82f6" letter-spacing="1.5">TOOLCHAIN MATRIX</text>
   <text class="id-m" x="16" y="54" font-size="12.5" fill="#e2e8f0">JavaScript · Python</text>
-  <text class="id-m" x="16" y="78" font-size="12.5" fill="#e2e8f0">Java · React</text>
+  <text class="id-m" x="16" y="78" font-size="12.5" fill="#e2e8f0">Java · React · Next.js</text>
   <text class="id-m" x="16" y="102" font-size="12.5" fill="#e2e8f0">Node.js · Supabase</text>
-  <line x1="16" y1="124" x2="175" y2="124" stroke="#1f293d" stroke-width="1"/>
-  <text class="id-m" x="16" y="146" font-size="11" fill="#718096">HARDWARE ID</text>
-  <text class="id-m" x="16" y="166" font-size="12.5" fill="#ff5500">SX-88204-AG</text>
+  <text class="id-m" x="16" y="126" font-size="12.5" fill="#e2e8f0">Tailwind · PostgreSQL</text>
+  <line x1="16" y1="146" x2="175" y2="146" stroke="#1f293d" stroke-width="1"/>
+  <text class="id-m" x="16" y="166" font-size="11" fill="#718096">CREDENTIAL ID</text>
+  <text class="id-m" x="16" y="186" font-size="12.5" fill="#ff5500">SX-88204-AG</text>
 </g>
 
 <!-- Physical Lanyard System -->
 <g class="id-drop">
   <g class="id-swing">
-    <!-- Woven Lanyard Ribbon (Tactile Matte Ribbon) -->
+    <!-- Woven Lanyard Ribbon -->
     <g stroke-linecap="butt">
-      <line x1="296" y1="-60" x2="413" y2="152" stroke="#c23218" stroke-width="24"/>
-      <line x1="534" y1="-60" x2="417" y2="152" stroke="#c23218" stroke-width="24"/>
+      <line x1="296" y1="-60" x2="413" y2="152" stroke="#b92d15" stroke-width="24"/>
+      <line x1="534" y1="-60" x2="417" y2="152" stroke="#b92d15" stroke-width="24"/>
       <line x1="296" y1="-60" x2="413" y2="152" stroke="#ff8470" stroke-width="2" stroke-dasharray="6 6" opacity=".75"/>
       <line x1="534" y1="-60" x2="417" y2="152" stroke="#ff8470" stroke-width="2" stroke-dasharray="6 6" opacity=".75"/>
     </g>
@@ -101,7 +115,12 @@
     <ellipse cx="415" cy="198" rx="12" ry="15" fill="none" stroke="url(#id-metal)" stroke-width="5"/>
 
     <!-- Laminated Card Base -->
-    <rect x="265" y="190" width="300" height="400" rx="18" fill="url(#id-card)" stroke="#2d3748" stroke-width="1.6"/>
+    <g clip-path="url(#id-card-clip)">
+      <rect x="265" y="190" width="300" height="400" rx="18" fill="url(#id-card)" stroke="#2d3748" stroke-width="1.6"/>
+      <!-- Holographic Foil Reflection -->
+      <rect class="id-foil" x="250" y="150" width="120" height="480" fill="url(#id-foil-grad)" opacity=".3"/>
+    </g>
+    <rect x="265" y="190" width="300" height="400" rx="18" fill="none" stroke="#2d3748" stroke-width="1.6"/>
     <rect x="387" y="202" width="56" height="8" rx="4" fill="#05080f"/>
 
     <!-- Studio Pass Header -->
@@ -114,15 +133,15 @@
     </g>
     <rect x="289" y="254" width="252" height="228" rx="14" fill="none" stroke="#334155" stroke-width="1.2"/>
 
-    <!-- Subtle studio badge corner index -->
+    <!-- Studio badge corner index -->
     <text class="id-m" x="300" y="498" font-size="10" fill="#64748b">NO. 2026-SX</text>
-    <text class="id-m" x="530" y="498" font-size="10" fill="#64748b" text-anchor="end">DEV.PASS</text>
+    <text class="id-m" x="530" y="498" font-size="10" fill="#10b981" text-anchor="end">VERIFIED AUTHOR</text>
 
     <!-- Name & Handle -->
     <text class="id-d" x="415" y="524" font-size="19" text-anchor="middle" fill="#ffffff">Agnishwar Ghosh</text>
     <text class="id-m" x="415" y="542" font-size="13" text-anchor="middle" fill="#94a3b8">@syntax-architect</text>
 
-    <!-- Physical Barcode with Sharp Lines -->
+    <!-- Laser-Crisp Physical Barcode -->
     <g transform="translate(300, 554)">
       <path d="M0,0 v24 M3,0 v24 M6,0 v24 M10,0 v24 M12,0 v24 M16,0 v24 M20,0 v24 M22,0 v24 M25,0 v24 M28,0 v24 M32,0 v24 M36,0 v24 M40,0 v24 M44,0 v24 M48,0 v24 M52,0 v24 M55,0 v24 M58,0 v24 M62,0 v24 M65,0 v24 M68,0 v24 M72,0 v24 M76,0 v24 M80,0 v24 M84,0 v24 M88,0 v24 M92,0 v24 M96,0 v24 M100,0 v24 M104,0 v24 M108,0 v24 M112,0 v24 M116,0 v24 M120,0 v24 M124,0 v24 M128,0 v24 M132,0 v24 M136,0 v24 M140,0 v24 M144,0 v24 M148,0 v24 M152,0 v24 M156,0 v24 M160,0 v24 M164,0 v24 M168,0 v24 M172,0 v24 M176,0 v24 M180,0 v24 M184,0 v24 M188,0 v24 M192,0 v24 M196,0 v24 M200,0 v24 M204,0 v24 M208,0 v24 M212,0 v24 M216,0 v24 M220,0 v24 M224,0 v24 M228,0 v24 M230,0 v24" stroke="#64748b" stroke-width="2"/>
     </g>
