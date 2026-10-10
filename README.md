@@ -15,19 +15,19 @@
 ---
 
 <!-- 1. Hero Intro Banner -->
-![Agnishwar Ghosh — Design Engineer Intro Banner](./assets/hero.svg?v=5)
+![Agnishwar Ghosh — Design Engineer Intro Banner](./assets/hero.svg?v=6)
 
 <!-- 2. Capabilities & Craft -->
 <a id="-engineering-capabilities"></a>
-![Capabilities & Craft Specifications](./assets/about-life.svg?v=5)
+![Capabilities & Craft Specifications](./assets/about-life.svg?v=6)
 
 <!-- 3. Orbital Toolchain -->
 <a id="-orbital-toolchain"></a>
-![Precision Orbital Toolchain](./assets/stack.svg?v=5)
+![Precision Orbital Toolchain](./assets/stack.svg?v=6)
 
 <!-- 4. Studio Identity Pass -->
 <a id="-studio-identity"></a>
-![Studio Identity Pass](./assets/id-dashboard.svg?v=5)
+![Studio Identity Pass](./assets/id-dashboard.svg?v=6)
 
 ---
 
@@ -86,7 +86,7 @@ A curated selection of high-performance web systems, agentic AI workspaces, and 
 
 <!-- 5. Connect & Dispatch Banner -->
 <a id="-direct-dispatch"></a>
-![Direct Transmission // Dispatch Hub](./assets/connect.svg?v=5)
+![Direct Transmission // Dispatch Hub](./assets/connect.svg?v=6)
 
 <!-- Clickable Social & Dispatch Matrix -->
 <div align="center">

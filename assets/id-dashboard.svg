@@ -135,7 +135,7 @@
     <text class="id-m" x="300" y="498" font-size="10" fill="#64748b">NO. 2026-SX</text>
     <text class="id-m" x="530" y="498" font-size="10" fill="#10b981" text-anchor="end">VERIFIED AUTHOR</text>
 
-    <!-- Name & Handle -->
+    <!-- Name and Handle -->
     <text class="id-d" x="415" y="524" font-size="19" text-anchor="middle" fill="#ffffff">Agnishwar Ghosh</text>
     <text class="id-m" x="415" y="542" font-size="13" text-anchor="middle" fill="#94a3b8">@syntax-architect</text>
 
