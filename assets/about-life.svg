@@ -28,10 +28,6 @@
 .about-f2{transform-box:fill-box;transform-origin:0 50%;animation:about-fp2 12s linear infinite both}
 @keyframes about-fp2{0%,66.67%{transform:scaleX(0)}100.00%,99.9%{transform:scaleX(1)}100%{transform:scaleX(0)}}
 
-/* HUD Progress Pulse */
-.hud-p1{animation:p-grow1 1.8s ease-out both}
-@keyframes p-grow1{from{width:0}to{width:140px}}
-
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 
@@ -49,11 +45,6 @@
   <stop offset="0" stop-color="#ff5500"/>
   <stop offset="1" stop-color="#ff7733"/>
 </linearGradient>
-
-<linearGradient id="about-blue" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0" stop-color="#2563eb"/>
-  <stop offset="1" stop-color="#38bdf8"/>
-</linearGradient>
 </defs>
 
 <!-- Background -->
@@ -61,10 +52,8 @@
 <rect x=".75" y=".75" width="828.5" height="388.5" rx="24" fill="url(#about-grid)"/>
 
 <!-- Top Spec Bar -->
-<g transform="translate(40, 24)">
-  <rect x="0" y="0" width="5" height="5" fill="#ff5500"/>
-  <text class="about-m" x="12" y="6" font-size="10.5" fill="#a0aec0" letter-spacing="1.5">SPECIFICATION // CAPABILITIES &amp; CRAFT</text>
-</g>
+<rect x="40" y="24" width="5" height="5" fill="#ff5500"/>
+<text class="about-m" x="52" y="30" font-size="10.5" fill="#a0aec0" letter-spacing="1.5">SPECIFICATION // CAPABILITIES &amp; CRAFT</text>
 <text class="about-m" x="790" y="30" font-size="10.5" fill="#718096" text-anchor="end" letter-spacing="1">INDEX 02</text>
 
 <!-- Center Vertical Divider -->
@@ -94,10 +83,8 @@
 <text class="about-b" x="72" y="330" font-size="13.5" fill="#718096">One builder, from architecture to live production.</text>
 
 <!-- Right Column: Interactive Focus Carousel -->
-<g transform="translate(456, 48)">
-  <rect x="0" y="0" width="5" height="5" fill="#3b82f6"/>
-  <text class="about-m" x="12" y="6" font-size="10.5" fill="#718096" letter-spacing="1.5">DISCIPLINE // CORE DRIVE</text>
-</g>
+<rect x="456" y="24" width="5" height="5" fill="#3b82f6"/>
+<text class="about-m" x="468" y="30" font-size="10.5" fill="#718096" letter-spacing="1.5">DISCIPLINE // CORE DRIVE</text>
 
 <!-- Slide 0: Front-end -->
 <g class="about-s0">
